@@ -1,0 +1,15 @@
+.quizz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    column-gap: 1rem;
+}
+
+.quizz .quizz-container {
+    width: 400px;
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

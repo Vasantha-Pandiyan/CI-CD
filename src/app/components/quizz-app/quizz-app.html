@@ -1,0 +1,37 @@
+<div class="quizz">
+    <div class="quizz-container">
+        <h2 class="text-center">Question {{currentQuestionIndex() + 1}}</h2>
+        <p class="mt-4 fs-5">{{currentQuestion().question}}</p>
+        <div class="d-flex flex-column mt-3">
+            @for(option of currentQuestion().options; track option) {
+                <button class="btn btn-outline-primary w-100 mb-2" (click)="selectOption(option)">{{option}}</button>
+            }
+        </div>
+        <div class="d-flex justify-content-between mt-2">
+            @if(finished() && questions.length) {
+            <div>
+                <h3 class="fs-4" [ngClass]="{
+                  'text-success': score() >= 4,
+                  'text-warning': score() >= 3 && percentage() < 4,
+                  'text-danger': score() < 3
+                }">Score: {{score()}} / {{questions.length}}</h3>
+                <button class="btn btn-primary mt-1 text-center" (click)="resetQuiz()">Restart Quiz</button>
+            </div>
+            <div>
+                <h3 [ngClass]="{
+                  'text-success': percentage() >= 70,
+                  'text-warning': percentage() >= 40 && percentage() < 70,
+                  'text-danger': percentage() < 40
+                }">Percentage: {{percentage()}}%</h3>
+            </div>
+            }
+        </div>
+    </div>
+    <div>
+        @if(feedback()) {
+            <div class="alert alert-info mt-4" role="alert">
+                {{feedback()}}
+            </div>
+        }
+    </div>
+</div>

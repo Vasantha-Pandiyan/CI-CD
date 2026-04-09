@@ -1,0 +1,6 @@
+.card-body {
+    width: 400px;
+    height: 300px;
+    overflow-y: scroll;
+    background: lightblue;
+}

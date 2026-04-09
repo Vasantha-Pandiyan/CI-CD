@@ -1,0 +1,15 @@
+<div class="container mt-4">
+    <div class="card text-white">
+        <div class="card-body bg-primary text-white">
+            <h5 class="card-title fw-bold">RxJS Operators</h5>
+            <p class="card-text"><strong>RxJS (Reactive Extensions for JavaScript)</strong> is a library used to handle asynchronous <strong>data streams</strong> using <strong>Observables:</strong></p>        
+        <ul>
+            @for(operator of rxjsOperators(); track operator.name; let first = $first) {
+                <li [class.mt-2]="!first"><a routerLinkActive="active" [routerLink]="['/', operator.code]">{{operator.name}}</a></li>
+            }
+        </ul>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

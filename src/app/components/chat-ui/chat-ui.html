@@ -1,0 +1,15 @@
+<div class="d-flex justify-content-center align-items-center mt-3">
+    <div class="card">
+        <div class="card-body">
+            @for(msg of messages(); track msg) {
+                <div class="bg-primary text-white p-2 mt-2">{{ msg }}</div>
+            }
+        </div>
+        <div class="card-footer">
+            <input type="text" class="form-control" placeholder="Type a message..." #input (keyup.enter)="send(input.value); input.value=''"/>
+        </div>
+        <div class="text-center my-2">
+            <button class="btn btn-primary" (click)="clearMessages()">Reset</button>
+        </div>
+    </div>
+</div>

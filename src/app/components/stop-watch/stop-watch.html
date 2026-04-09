@@ -1,0 +1,9 @@
+<section class="text-center">   
+        <h2 class="text-primary mt-2 fw-bold">Stop Watch</h2>
+        <div class="fs-3 fw-bold">{{ timer() }}s</div>
+        <div class="d-flex justify-content-center gap-2 mt-3">
+        <button class="btn btn-success" (click)="start()">Start</button>
+        <button class="btn btn-danger" (click)="stop()">Stop</button>
+        <button class="btn btn-warning" (click)="reset()">Reset</button>
+        </div>  
+</section>

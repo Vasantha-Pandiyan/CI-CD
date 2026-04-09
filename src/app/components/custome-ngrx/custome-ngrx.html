@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row text-center">
+        <div class="col d-flex align-items-center justify-content-center">
+            <input type="number" placeholder="Enter a number" [(ngModel)]="number">
+            <button class="btn btn-sm btn-primary ms-3" (click)="customCounter()">Add Counter</button>
+        </div>
+        <div class="col d-flex align-items-center justify-content-center">
+            <input type="number" placeholder="Enter a number" [(ngModel)]="removeNumber">            
+            <button class="btn btn-sm btn-primary ms-3" (click)="removeCounter()">Remove Counter</button>
+        </div>
+    </div>
+</div>

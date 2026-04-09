@@ -1,0 +1,17 @@
+.card-body {
+    padding: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    background: lightcyan;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    border-radius: 10px;
+}
+li a {
+    text-decoration: none;
+}
+.active {
+    font-weight: bold;
+}
