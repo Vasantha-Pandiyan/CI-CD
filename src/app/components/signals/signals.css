@@ -1,3 +1,26 @@
 .card-body {
     padding: 0;
 }
+
+.question {
+    text-indent: -1.8rem;
+    padding-left: 1.8rem;
+}
+
+.question-answers {
+    border-radius: 10px;
+}
+
+.question-answers p {
+    margin: 0;
+}
+
+.answer {
+    border-radius: 10px;
+}
+
+.symbol {
+    font-size: 2rem;
+    color:blue;
+    cursor: pointer;
+}

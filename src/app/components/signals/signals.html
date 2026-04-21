@@ -2,16 +2,38 @@
     <div class="container">
         <div class="card p-3 bg-dark text-white">
             <div class="card-titel">
-                <h5>Signals</h5>
-                <p>In Angular, a signal is a reactive primitive (introduced in Angular 16) used to store reactive values and automatically update the UI when the state changes.</p>
+                <h4>Signals</h4>
+                <p>In Angular, a signal is a reactive primitive (introduced in Angular 16) used to store reactive values
+                    and automatically update the UI when the state changes.</p>
+                <h5>Signals Interview Questions and Answers:</h5>
+                <div class="question-answers bg-light text-dark p-3 my-3">
+                    @for(sqa of signalsQuestionsAnswers(); track sqa.question; let i = $index; let first = $index) {
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div class="col-10">
+                            <p class="question">
+                                <strong>{{sqa.question}}</strong>
+                            </p>
+                        </div>
+                        <div class="col-2 text-center"><span class="symbol" (click)="answerVisible(i)">{{ activeIndex()
+                                === i ? '−' : '+' }}</span></div>
+                    </div>
+                    <div>
+                        @if(activeIndex() === i){
+                        <p class="answer bg-info p-2 my-2 mx-3">{{sqa.answer}}</p>
+                        }
+                    </div>
+                    }
+                </div>
             </div>
             <div class="card-body">
+                <h5>Signal Samples</h5>
                 <ul>
                     <li>
                         <a class="nav-link" routerLink="/quizz" routerLinkActive="active">Quiz App</a>
                     </li>
                     <li class="mt-2">
-                        <a class="nav-link" routerLink="/expensive-tracker" routerLinkActive="active">Expensive Tracker</a>
+                        <a class="nav-link" routerLink="/expensive-tracker" routerLinkActive="active">Expensive
+                            Tracker</a>
                     </li>
                     <li class="mt-2">
                         <a class="nav-link" routerLink="/stop-watch" routerLinkActive="active">Stop Watch</a>
